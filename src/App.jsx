@@ -3,6 +3,7 @@ import "./App.css";
 import ControlledExample from "./ControlledExample.jsx";
 import WindowSize from "./WindowSize.jsx";
 import Message from "./Message.jsx";
+import ParentChildDemo from "./ParentChildDemo.jsx";
 
 // 1) Esimerkki uudesta tilasta (state) funktionaalisessa komponentissa
 function Counter() {
@@ -86,10 +87,14 @@ function App() {
       {/* 4. useEffect */}
       <WindowSize />
 
-      {/* 5. Komponenttirakenne & Props */}
+      {/* 5. Komponenttirakenne & Props (osa 1) */}
       <Message text="Tämä viesti tulee erillisestä komponentista!" />
+
+      {/* 6. Props – komponentin parametrit (osa 2) */}
+      <ParentChildDemo />
     </>
   );
 }
+
 
 export default App;
