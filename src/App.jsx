@@ -1,5 +1,8 @@
 import { useState } from "react";
 import "./App.css";
+import ControlledExample from "./ControlledExample.jsx";
+import WindowSize from "./WindowSize.jsx";
+import Message from "./Message.jsx";
 
 // 1) Esimerkki uudesta tilasta (state) funktionaalisessa komponentissa
 function Counter() {
@@ -46,9 +49,7 @@ function EventsDemo() {
       <h2>2. Tapahtumien kuuntelu (onClick & onChange)</h2>
 
       <div>
-        <button onClick={handleButtonClick}>
-          Klikkaa minua
-        </button>
+        <button onClick={handleButtonClick}>Klikkaa minua</button>
         <p>Nappia klikattu: {clickCount} kertaa</p>
       </div>
 
@@ -72,8 +73,21 @@ function App() {
   return (
     <>
       <h1>Tehtäväsarja 2.1 – Reactin perusteet</h1>
+
+      {/* 1. useState */}
       <Counter />
+
+      {/* 2. Events */}
       <EventsDemo />
+
+      {/* 3. Controlled State */}
+      <ControlledExample />
+
+      {/* 4. useEffect */}
+      <WindowSize />
+
+      {/* 5. Komponenttirakenne & Props */}
+      <Message text="Tämä viesti tulee erillisestä komponentista!" />
     </>
   );
 }
