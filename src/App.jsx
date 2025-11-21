@@ -4,6 +4,7 @@ import ControlledExample from "./ControlledExample.jsx";
 import WindowSize from "./WindowSize.jsx";
 import Message from "./Message.jsx";
 import ParentChildDemo from "./ParentChildDemo.jsx";
+import TimeDisplay from "./TimeDisplay.jsx";
 
 // 1) Esimerkki uudesta tilasta (state) funktionaalisessa komponentissa
 function Counter() {
@@ -92,6 +93,10 @@ function App() {
 
       {/* 6. Props – komponentin parametrit (osa 2) */}
       <ParentChildDemo />
+
+      {/* 7. Räätälöity Hook – Custom Hook */}
+      <TimeDisplay />
+
     </>
   );
 }
