@@ -1,16 +1,75 @@
-# React + Vite
+# Tehtäväsarja 2.1 – Reactin perusteet
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Tämä projekti sisältää kaikki Tehtäväsarja 2.1:ssä vaaditut React-perusteet. Projekti on toteutettu Vite + React -pohjalla ja sisältää esimerkit useStatesta, tapahtumankuuntelusta, controlled state -tilanhallinnasta, useEffect-hookista, komponenttirakenteesta sekä propsien välityksestä ja oman custom hookin toteutuksesta.
 
-Currently, two official plugins are available:
+## 📦 Asennus ja kehitysympäristön käynnistys
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+```bash
+npm install
+npm run dev
+```
 
-## React Compiler
+Sovellus käynnistyy osoitteeseen:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```
+http://localhost:5173/
+```
 
-## Expanding the ESLint configuration
+## 📌 Sisältö
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Projektissa on toteutettu seuraavat osat:
+
+### 1. Uusi tila (useState)
+
+* Oman tilan luonti komponenttiin
+* Oletusarvo, päivitysfunktio ja renderöinti
+
+### 2. Tapahtumien kuuntelu (onClick & onChange)
+
+* Nappien tapahtumankäsittelijät
+* Controlled input -kenttä
+
+### 3. Controlled State
+
+* Controlled input komponentissa
+* Tilapäivitys ja syötetyn arvon näyttäminen
+
+### 4. useEffect-esimerkki
+
+* Ikkunan koon seuraaminen reaaliajassa
+* Sivuvaikutusten siivous
+
+### 5. Komponenttirakenne & Props (osa 1)
+
+* Erillinen lapsikomponentti
+* Tekstin välitys propsien avulla
+
+### 6. Props – komponentin parametrit (osa 2)
+
+* Parent → Child tilan välitys
+* children-propin käyttö
+
+### 7. Custom Hook
+
+* Oma custom hook `useCurrentTime()`
+* Kellon ajan päivitys sekunnin välein
+
+## 🗂 Projektirakenne
+
+```
+src/
+ ├── App.jsx
+ ├── ControlledExample.jsx
+ ├── EventsDemo.jsx
+ ├── Counter.jsx
+ ├── WindowSize.jsx
+ ├── Message.jsx
+ ├── ParentChildDemo.jsx
+ ├── TimeDisplay.jsx
+ ├── useCurrentTime.js
+ └── index.css
+```
+
+## 📝 Lisenssi
+
+Tämä projekti on kurssitehtävä ja tarkoitettu opiskelukäyttöön.
